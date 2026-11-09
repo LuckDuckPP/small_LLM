@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.aiev/
+.aiev
+.vscode/
+.vscode
