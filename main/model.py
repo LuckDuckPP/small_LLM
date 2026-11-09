@@ -1,5 +1,5 @@
 """
-language_model.py
+model.py
 =================
 
 Decoder-only language model for text generation.
@@ -7,15 +7,15 @@ Decoder-only language model for text generation.
 It wires together:
 
     token ids ──► Embedding ──► TransformerDecoder ──► LM head ──► logits over vocab
-                  (this file)    (transformer_architecture.py)     (this file)
-
+                  (this file)    (transformer.py)                   (this file)
+ 
 and uses the logits to do next-token prediction:
 
   * training  : cross-entropy between logits[t] and the token that follows position t
   * inference : autoregressive sampling (temperature, top-k, top-p, repetition
                 penalty, EOS handling) accelerated by a KV cache
 
-Run `python language_model.py` for a tiny end-to-end demo (train + generate).
+Run `python model.py` for a tiny end-to-end demo (train + generate).
 """
 
 from __future__ import annotations

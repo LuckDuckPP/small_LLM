@@ -1,20 +1,20 @@
 """
-chat_interface.py  -  start here
+interface.py  -  start here
 ================================
 
 Chat with your decoder-only transformer.
 
-    python chat_interface.py                      # desktop window (Tkinter)
-    python chat_interface.py --cli                # terminal chat (works over SSH / without a display)
-    python chat_interface.py --checkpoint my.pt   # use a specific trained model
-    python chat_interface.py --train-steps 1500   # train on the built-in dialogues first, then chat
-    python chat_interface.py --train-steps 3000 --data my_chats.jsonl --size base
+    python interface.py                      # desktop window (Tkinter)
+    python interface.py --cli                # terminal chat (works over SSH / without a display)
+    python interface.py --checkpoint my.pt   # use a specific trained model
+    python interface.py --train-steps 1500   # train on the built-in dialogues first, then chat
+    python interface.py --train-steps 3000 --data my_chats.jsonl --size base
 
-If `chat_model.pt` exists in the current folder it is loaded automatically.
+If `model.pt` exists in the current folder it is loaded automatically.
 If no display is available (or Tkinter is missing) the terminal chat starts instead.
 
 Files this app needs (keep them in one folder):
-    transformer_architecture.py, language_model.py, chat_engine.py, chat_gui.py, chat_interface.py
+    transformer.py, model.py, engine.py, gui.py, interface.py
 """
 
 from __future__ import annotations
@@ -43,7 +43,7 @@ from engine import (
     train_model,
 )
 
-DEFAULT_CHECKPOINT = "chat_model.pt"
+DEFAULT_CHECKPOINT = "trained_model.pt"
 
 CLI_HELP = """\
 Commands

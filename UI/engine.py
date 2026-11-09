@@ -1,5 +1,5 @@
 """
-chat_engine.py
+engine.py
 ==============
 
 Everything between "a trained transformer" and "a chat conversation", with no UI code:
@@ -15,7 +15,7 @@ Everything between "a trained transformer" and "a chat conversation", with no UI
                          streams decoded text chunks
   * save/load_checkpoint, build_model, SAMPLE_PAIRS (built-in demo dialogues)
 
-It sits on top of `transformer_architecture.py` and `language_model.py`.
+It sits on top of `transformer.py` and `model.py`.
 """
 
 from __future__ import annotations

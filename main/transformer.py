@@ -1,12 +1,12 @@
 """
-transformer_architecture.py
+transformere.py
 ===========================
 
-A modern, decoder-only Transformer stack (LLaMA-style) written in pure PyTorch.
+A modern, decoder-only Transformer stack (LLaMA-style) in pure PyTorch.
 
 This file contains ONLY the transformer architecture (the "body" of the model).
 It does not contain the token embedding layer or the language-modelling head;
-those live in `language_model.py`, which wraps this decoder.
+those live in `model.py`, which wraps this decoder.
 
 Building blocks
 ---------------

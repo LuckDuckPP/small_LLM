@@ -1,5 +1,5 @@
 """
-chat_gui.py
+gui.py
 ===========
 
 Desktop chat window (Tkinter - ships with Python, nothing extra to install).
