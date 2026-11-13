@@ -18,8 +18,9 @@ project/
 │   ├── interface.py
 │   └── gui.py
 │
-├── model.py
-└── transformer.py
+|──main/
+|   ├── model.py
+|   ├── transformer.py
 ```
 
 ---
@@ -304,6 +305,6 @@ The UI layer manages conversation input and output, while `engine.py` coordinate
 
 ## 7. Important Architecture Note
 
-The original description of `transformer.py` refers to `language_model.py` as the wrapper containing the embedding and language-model head. However, the separate description of `model.py` assigns those responsibilities to `model.py`.
+The original description of `transformer.py` refers to `model.py` as the wrapper containing the embedding and language-model head. However, the separate description of `model.py` assigns those responsibilities to `model.py`.
 
 This documentation follows the explicit `model.py` description for the main data-flow diagram. Confirm the actual implementation and file names in the source code if both descriptions are intended to describe the same model wrapper.
